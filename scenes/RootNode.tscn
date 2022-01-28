@@ -1,0 +1,108 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/env/lighting/light_tex_spot_1.png" type="Texture" id=1]
+[ext_resource path="res://sprites/env/Nm_tileset/tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://sprites/env/lighting/light_tex_1.png" type="Texture" id=3]
+
+[node name="RootNode" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.137255, 0.137255, 0.137255, 1 )
+
+[node name="Light Root" type="Node" parent="."]
+
+[node name="Light2D2" type="Light2D" parent="Light Root"]
+position = Vector2( 700, 199 )
+scale = Vector2( 0.5, 0.25 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -256 )
+texture_scale = 1.1
+energy = 2.12
+range_height = 316.7
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_gradient_length = 10.0
+shadow_filter = 5
+shadow_filter_smooth = 6.2
+
+[node name="Light2D3" type="Light2D" parent="Light Root"]
+position = Vector2( 517, 201 )
+scale = Vector2( 0.5, 0.25 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -256 )
+texture_scale = 1.1
+energy = 2.12
+range_height = 316.7
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_gradient_length = 10.0
+shadow_filter = 5
+shadow_filter_smooth = 6.2
+
+[node name="Light2D4" type="Light2D" parent="Light Root"]
+position = Vector2( 329, 198 )
+scale = Vector2( 0.5, 0.25 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -256 )
+texture_scale = 1.1
+energy = 2.12
+range_height = 316.7
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_gradient_length = 10.0
+shadow_filter = 5
+shadow_filter_smooth = 6.2
+
+[node name="Light2D7" type="Light2D" parent="Light Root"]
+position = Vector2( 888, 253 )
+scale = Vector2( 1.4375, 1.4375 )
+texture = ExtResource( 3 )
+texture_scale = 1.1
+color = Color( 1, 0, 0.0470588, 1 )
+energy = 1.4
+range_height = 183.2
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_gradient_length = 2.0
+
+[node name="Light2D8" type="Light2D" parent="Light Root"]
+position = Vector2( 150, 240 )
+scale = Vector2( 1.41122, 1.43963 )
+texture = ExtResource( 3 )
+texture_scale = 1.1
+color = Color( 1, 0, 0.0470588, 1 )
+energy = 1.4
+range_height = 183.2
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_gradient_length = 5.0
+shadow_filter = 5
+shadow_filter_smooth = 6.2
+
+[node name="Light2D5" type="Light2D" parent="Light Root"]
+position = Vector2( 140.2, -134.2 )
+scale = Vector2( 0.5, 0.25 )
+texture = ExtResource( 1 )
+texture_scale = 1.1
+energy = 2.12
+range_height = 209.5
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_gradient_length = 41.7
+shadow_filter = 5
+shadow_filter_smooth = 6.2
+
+[node name="Light2D6" type="Light2D" parent="Light Root"]
+position = Vector2( 905.2, -141.2 )
+scale = Vector2( 0.5, 0.25 )
+texture = ExtResource( 1 )
+texture_scale = 1.1
+energy = 2.12
+range_height = 209.5
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_gradient_length = 41.7
+shadow_filter = 5
+shadow_filter_smooth = 6.2
+
+[node name="Worldtiles" type="Node" parent="."]
+
+[node name="Ground" type="TileMap" parent="Worldtiles"]
+z_as_relative = false
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( -131072, 3, 0, -131071, 4, 0, -131066, 2, 0, -131065, 4, 0, -65536, 1, 0, -65535, 1, 0, -65530, 1, 0, -65529, 1, 0, 0, 1, 0, 1, 1, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 1, 0, 7, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0 )
