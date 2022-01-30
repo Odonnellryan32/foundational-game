@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/menu/Singleplayer.gd" type="Script" id=1]
+[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=2]
+
+[node name="Singleplayer" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_Name" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.1
+margin_left = -20.0
+margin_top = 1.0
+margin_right = 20.0
+margin_bottom = 13.0
+custom_colors/font_color = Color( 0.0392157, 0.447059, 0.666667, 1 )
+custom_colors/font_color_shadow = Color( 0.188235, 0.172549, 0.27451, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Campaign
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_New_Game" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 100.0
+margin_right = 200.0
+margin_bottom = 120.0
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Load_Game" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 200.0
+margin_right = 200.0
+margin_bottom = 220.0
+text = "Load Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_Back" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 300.0
+margin_right = 200.0
+margin_bottom = 320.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
