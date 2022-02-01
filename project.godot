@@ -14,6 +14,10 @@ config/name="Foundational Game"
 run/main_scene="res://scenes/menu/Menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [input]
 
 move_left={

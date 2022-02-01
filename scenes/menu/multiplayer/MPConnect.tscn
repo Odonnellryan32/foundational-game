@@ -1,0 +1,137 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fonts/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scripts/menu/multiplayer/Connect.gd" type="Script" id=2]
+[ext_resource path="res://assets/godot_theme/gui.theme" type="Theme" id=3]
+
+[node name="Root" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_header" type="Label" parent="."]
+modulate = Color( 0.313726, 0.356863, 1, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -149.5
+margin_top = 174.0
+margin_right = 149.5
+margin_bottom = 213.0
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "Direct connect"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ctrl_group" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_join" type="Button" parent="ctrl_group"]
+margin_left = 320.0
+margin_top = 384.0
+margin_right = 488.0
+margin_bottom = 436.0
+theme = ExtResource( 3 )
+
+[node name="lbl_join" type="Label" parent="ctrl_group/btn_join"]
+modulate = Color( 0.545098, 0.701961, 1, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 6.0
+theme = ExtResource( 3 )
+text = "Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_create" type="Button" parent="ctrl_group"]
+margin_left = 536.0
+margin_top = 384.0
+margin_right = 704.0
+margin_bottom = 436.0
+theme = ExtResource( 3 )
+
+[node name="lbl_create" type="Label" parent="ctrl_group/btn_create"]
+modulate = Color( 0.545098, 0.701961, 1, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 6.0
+theme = ExtResource( 3 )
+text = "Join"
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="ctrl_group"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -32.0
+margin_right = 352.0
+margin_bottom = 32.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txt_ipaddress" type="LineEdit" parent="ctrl_group/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -32.0
+margin_right = 528.0
+margin_bottom = 32.0
+theme = ExtResource( 3 )
+align = 2
+max_length = 36
+placeholder_text = "Host Address"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_separator" type="Label" parent="ctrl_group/Control"]
+anchor_left = 1.0
+anchor_top = 0.562
+anchor_right = 1.0
+anchor_bottom = 0.562
+margin_left = -176.0
+margin_top = -31.968
+margin_right = -144.0
+margin_bottom = 32.032
+theme = ExtResource( 3 )
+text = ":"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="txt_port" type="LineEdit" parent="ctrl_group/Control"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -144.0
+margin_top = -32.0
+margin_bottom = 32.0
+theme = ExtResource( 3 )
+max_length = 5
+placeholder_text = "Port"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="ctrl_group/btn_join" to="ctrl_group" method="_on_btn_join_button_up"]
+[connection signal="button_up" from="ctrl_group/btn_create" to="ctrl_group" method="_on_btn_create_button_up"]
+[connection signal="text_changed" from="ctrl_group/Control/txt_port" to="ctrl_group" method="_on_txt_port_text_changed"]
