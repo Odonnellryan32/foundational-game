@@ -1,6 +1,6 @@
 extends Control
 
-const util = preload("res://scripts/utility/text_utils.gd")
+const util = preload("res://scripts/utility/TextUtils.gd")
 
 var regex := RegEx.new()
 var txt_name: LineEdit
